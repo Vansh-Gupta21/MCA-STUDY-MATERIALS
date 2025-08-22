@@ -97,7 +97,8 @@ function Header({
               </a>
             </div>
           </div>
-
+         </div>
+                  
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {["Semester I", "Semester II", "Semester III", "Semester IV"].map(
               (sem, index) => (
