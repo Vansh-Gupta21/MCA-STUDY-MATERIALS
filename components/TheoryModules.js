@@ -1,26 +1,26 @@
 function TheoryModules({ courseCode }) {
   // Special design for Laboratory courses
   const labCourses = {
-    '20MCA131': {
-      name: 'Programming Lab',
-      language: 'Python',
-      icon: '🐍',
-      color: 'from-green-400 to-blue-500',
-      bgColor: 'bg-green-50',
-      darkBgColor: 'dark:bg-gray-900',
-      borderColor: 'border-green-300',
-      description: 'Master Python programming with hands-on projects and real-world applications'
-    },
-    '20MCA133': {
-      name: 'Web Programming Lab',
-      language: 'HTML/CSS/JS',
-      icon: '🌐',
-      color: 'from-blue-400 to-purple-500',
-      bgColor: 'bg-blue-50',
-      darkBgColor: 'dark:bg-gray-900',
-      borderColor: 'border-blue-300',
-      description: 'Build stunning websites with modern web technologies and frameworks'
-    },
+    // '20MCA131': {
+    //   name: 'Programming Lab',
+    //   language: 'Python',
+    //   icon: '🐍',
+    //   color: 'from-green-400 to-blue-500',
+    //   bgColor: 'bg-green-50',
+    //   darkBgColor: 'dark:bg-gray-900',
+    //   borderColor: 'border-green-300',
+    //   description: 'Master Python programming with hands-on projects and real-world applications'
+    // },
+    // '20MCA133': {
+    //   name: 'Web Programming Lab',
+    //   language: 'HTML/CSS/JS',
+    //   icon: '🌐',
+    //   color: 'from-blue-400 to-purple-500',
+    //   bgColor: 'bg-blue-50',
+    //   darkBgColor: 'dark:bg-gray-900',
+    //   borderColor: 'border-blue-300',
+    //   description: 'Build stunning websites with modern web technologies and frameworks'
+    // },
     '20MCA135': {
       name: 'Data Structures Lab',
       language: 'C++',
@@ -183,7 +183,6 @@ function TheoryModules({ courseCode }) {
       </div>
     );
   }
-
   // Custom structure for 20MCA102
   if (courseCode === '20MCA102') {
     const modules = [
@@ -253,17 +252,22 @@ function TheoryModules({ courseCode }) {
           <div key={module.name}>
             <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
             <div className="space-y-2">
-              {module.files.map((file) => (
-                <a
-                  key={file.name}
-                  href={file.path}
-                  download
-                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all text-blue-700 dark:text-blue-400 font-semibold"
-                >
-                  <span className="icon-download text-lg"></span>
-                  <span>{file.name}</span>
-                </a>
-              ))}
+              {module.files.map((file) => {
+                const idMatch = file.path.match(/id=(.*)$/);
+                const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+                return (
+                <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
+                  <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
+                  <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-eye text-lg"></span>
+                    View
+                  </a>
+                  <a href={file.path} download className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-download text-lg"></span>
+                    Download
+                  </a>
+                </div>
+              );})}
             </div>
           </div>
         ))}
@@ -327,17 +331,22 @@ if (courseCode === '20MCA107') {
         <div key={module.name}>
           <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
           <div className="space-y-2">
-            {module.files.map((file) => (
-              <a
-                key={file.name}
-                href={file.path}
-                download
-                className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all text-blue-700 dark:text-blue-400 font-semibold"
-              >
-                <span className="icon-download text-lg"></span>
-                <span>{file.name}</span>
-              </a>
-            ))}
+            {module.files.map((file) => {
+              const idMatch = file.path.match(/id=(.*)$/);
+              const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+              return (
+              <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
+                <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
+                <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                  <span className="icon-eye text-lg"></span>
+                  View
+                </a>
+                <a href={file.path} download className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                  <span className="icon-download text-lg"></span>
+                  Download
+                </a>
+              </div>
+            );})}
           </div>
         </div>
       ))}
@@ -413,7 +422,10 @@ if (courseCode === '20MCA188') {
               {module.files.length === 0 ? (
                 <div className="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/20 border-2 border-yellow-500 rounded-lg text-yellow-700 dark:text-yellow-300 font-semibold inline-block">Coming Soon</div>
               ) : (
-                module.files.map((file) => (
+                module.files.map((file) => {
+                  const idMatch = file.path.match(/id=(.*)$/);
+                  const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+                  return (
                   file.copyrighted ? (
                     <div
                       key={file.name}
@@ -423,17 +435,19 @@ if (courseCode === '20MCA188') {
                       <span>{file.name} – Copyrighted Material (Not Available for Download)</span>
                     </div>
                   ) : (
-                    <a
-                      key={file.name}
-                      href={file.path}
-                      download
-                      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all text-blue-700 dark:text-blue-400 font-semibold"
-                    >
-                      <span className="icon-download text-lg"></span>
-                      <span>{file.name}</span>
-                    </a>
+                    <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
+                      <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
+                      <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                        <span className="icon-eye text-lg"></span>
+                        View
+                      </a>
+                      <a href={file.path} download className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                        <span className="icon-download text-lg"></span>
+                        Download
+                      </a>
+                    </div>
                   )
-                ))
+                );})
               )}
             </div>
           </div>
@@ -497,17 +511,22 @@ if (courseCode === '20MCA103') {
           <div key={module.name}>
             <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
             <div className="space-y-2">
-              {module.files.map((file) => (
-                <a
-                  key={file.name}
-                  href={file.path}
-                  download
-                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all text-blue-700 dark:text-blue-400 font-semibold"
-                >
-                  <span className="icon-download text-lg"></span>
-                  <span>{file.name}</span>
-                </a>
-              ))}
+              {module.files.map((file) => {
+                const idMatch = file.path.match(/id=(.*)$/);
+                const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+                return (
+                <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
+                  <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
+                  <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-eye text-lg"></span>
+                    View
+                  </a>
+                  <a href={file.path} download className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-download text-lg"></span>
+                    Download
+                  </a>
+                </div>
+              );})}
             </div>
           </div>
         ))}
@@ -568,17 +587,22 @@ if (courseCode === '20MCA104') {
           <div key={module.name}>
             <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
             <div className="space-y-2">
-              {module.files.map((file) => (
-                <a
-                  key={file.name}
-                  href={file.path}
-                  download
-                  className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all text-blue-700 dark:text-blue-400 font-semibold"
-                >
-                  <span className="icon-download text-lg"></span>
-                  <span>{file.name}</span>
-                </a>
-              ))}
+              {module.files.map((file) => {
+                const idMatch = file.path.match(/id=(.*)$/);
+                const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+                return (
+                <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
+                  <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
+                  <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-eye text-lg"></span>
+                    View
+                  </a>
+                  <a href={file.path} download className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
+                    <span className="icon-download text-lg"></span>
+                    Download
+                  </a>
+                </div>
+              );})}
             </div>
           </div>
         ))}
