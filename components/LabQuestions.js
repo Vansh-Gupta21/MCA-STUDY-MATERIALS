@@ -146,24 +146,15 @@ function LabQuestions({ course }) {
   ];
 
   return (
-   <div className="space-y-8">
-        {modules.map((module, idx) => (
-          <div key={module.name}>
-            <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
-            <div className="space-y-2">
-              {module.files.map((file) => {
-                const idMatch = file.path.match(/id=(.*)$/);
-                const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
-                return (
-                <div className="space-y-8">
-        {modules.map((module, idx) => (
-          <div key={module.name}>
-            <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
-            <div className="space-y-2">
-              {module.files.map((file) => {
-                const idMatch = file.path.match(/id=(.*)$/);
-                const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
-                return (
+    <div className="space-y-8">
+      {modules.map((module, idx) => (
+        <div key={module.name}>
+          <h3 className="font-bold text-lg mb-2 dark:text-white">{module.name}</h3>
+          <div className="space-y-2">
+            {module.files.map((file) => {
+              const idMatch = file.path.match(/id=(.*)$/);
+              const viewPath = idMatch ? `https://drive.google.com/file/d/${idMatch[1]}/view` : file.path;
+              return (
                 <div key={file.name} className="bg-white dark:bg-gray-800 border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] p-2 flex items-center gap-2">
                   <span className="flex-1 text-blue-700 dark:text-blue-400 font-semibold">{file.name}</span>
                   <a href={viewPath} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-blue-400 to-blue-600 text-white font-bold rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] transition-all">
@@ -175,16 +166,12 @@ function LabQuestions({ course }) {
                     Download
                   </a>
                 </div>
-              );})}
-            </div>
+              );
+            })}
           </div>
-        ))}
-      </div>
-              );})}
-            </div>
-          </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
   );
 }
 ///
