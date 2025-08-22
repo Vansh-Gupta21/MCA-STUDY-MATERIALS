@@ -151,27 +151,24 @@ function Header({
             </button>
 
             {/* RIT Internal Exam Question Papers Tab */}
-            <button
-              className="relative p-4 rounded-xl border-3 border-black font-black text-sm bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] cursor-not-allowed opacity-75"
-              disabled
-            >
+            <button className="relative p-4 rounded-xl border-3 border-black font-black text-sm bg-gradient-to-r from-red-400 to-red-600 text-white shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] hover:scale-105 hover:-translate-y-1 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs opacity-75">RIT</span>
-                <div className="w-6 h-6 rounded-full border-2 border-gray-400 flex items-center justify-center text-xs font-black bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400">
+                <span className="text-xs opacity-75 font-semibold">RIT</span>
+                <div className="w-6 h-6 rounded-full border-2 border-red-700 flex items-center justify-center text-xs font-black bg-red-200 text-red-900">
                   <div className="icon-clock text-xs"></div>
                 </div>
               </div>
               <div className="text-left">
                 <div className="text-base mb-1">
-                  <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded font-extrabold border-2 border-gray-300 dark:border-gray-500 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)]">
+                  <span className="font-extrabold text-white py-1 rounded">
                     Internal Exam
                   </span>
                 </div>
                 <div className="text-xs opacity-75">
-                  <span className="bg-red-500 text-white px-1 py-0.5 rounded font-bold text-xs border border-red-600">
+                  <span className="bg-white text-red-500 px-1 py-0.5 rounded font-bold text-xs border border-red-300 animate-fade-in-out">
                     Coming Soon
                   </span>
-                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  <div className="text-xs text-gray-200 mt-1">
                     RIT Kottayam
                   </div>
                 </div>
