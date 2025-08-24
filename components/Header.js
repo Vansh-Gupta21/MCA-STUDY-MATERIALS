@@ -84,21 +84,21 @@ function Header({
                   {isDarkMode ? "Light" : "Dark"}
                 </button>
 
-                {/* GitHub Star Button */}
-                <a
-                  href="https://github.com/zoxilsi/MCA-STUDY-MATERIALS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 text-sm font-bold rounded-lg border-2 transition-all whitespace-nowrap bg-gray-900 dark:bg-gray-800 text-white border-black dark:border-gray-700 hover:bg-gray-700 dark:hover:bg-gray-700 shadow-[2px_2px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
-                >
-                  <div className="icon-github text-sm"></div>
-                  <div className="icon-star text-sm"></div>
-                  Star
-                </a>
-              </div>
+
+              {/* Responsive Star Button */}
+              <a
+                href="https://github.com/zoxilsi/MCA-STUDY-MATERIALS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center gap-2 px-3 py-2 text-sm font-bold rounded-lg border-2 transition-all whitespace-nowrap bg-gray-900 text-white border-black hover:bg-gray-700 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 shadow-[2px_2px_0px_rgba(0,0,0,0.9)] hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)]"
+              >
+                <i className="fab fa-github text-lg"></i>
+                ⭐ Star
+              </a>
             </div>
           </div>
-
+         </div>
+                  
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {["Semester I", "Semester II", "Semester III", "Semester IV"].map(
               (sem, index) => (
