@@ -80,14 +80,18 @@ function HomePage() {
               onClick={() => window.handlePageChange('courses')}
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <Icon name="book-open" className="text-xl" />
+              <div className="w-8 h-8 bg-white/20 rounded-lg border border-white/30 shadow-[1px_1px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center">
+                <Icon name="book-open" className="text-lg text-white" />
+              </div>
               Explore Courses
             </button>
             <button
               onClick={() => window.handlePageChange('question-papers')}
               className="px-8 py-4 bg-white dark:bg-gray-800 text-black dark:text-white font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <Icon name="file-text" className="text-xl" />
+              <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center">
+                <Icon name="file-text" className="text-lg text-white" />
+              </div>
               Question Papers
             </button>
           </div>
@@ -168,7 +172,9 @@ function HomePage() {
                   <div className={`w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center`}>
                     <span className="text-white font-black text-lg">{index + 1}</span>
                   </div>
-                  <Icon name="arrow-right" className="text-gray-400" />
+                  <div className="w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-500 rounded border border-gray-300 shadow-[1px_1px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center">
+                    <Icon name="arrow-right" className="text-xs text-white" />
+                  </div>
                 </div>
                 <h3 className="text-lg font-black text-black dark:text-white mb-2">
                   {semester}

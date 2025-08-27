@@ -61,7 +61,7 @@ function ContactPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center mx-auto mb-8">
-            <div className="icon-mail text-white text-3xl"></div>
+            <Icon name="mail" className="text-white text-3xl" />
           </div>
           
           <h1 className="text-5xl font-black text-black dark:text-white mb-6">
@@ -98,7 +98,7 @@ function ContactPage() {
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-xl border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center flex-shrink-0`}>
-                    <div className={`icon-${method.icon} text-white text-2xl`}></div>
+                    <Icon name={method.icon} className="text-white text-2xl" />
                   </div>
                   
                   <div className="flex-1">
@@ -113,7 +113,7 @@ function ContactPage() {
                     </p>
                   </div>
                   
-                  <div className="icon-external-link text-gray-400 flex-shrink-0"></div>
+                  <Icon name="external-link" className="text-gray-400 flex-shrink-0" />
                 </div>
               </a>
             ))}
@@ -163,7 +163,7 @@ function ContactPage() {
               href="mailto:24mp2275@rit.ac.in?subject=Contributing to MCA Notes"
               className="px-8 py-4 bg-white text-green-600 font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <div className="icon-mail text-xl"></div>
+              <Icon name="mail" className="text-xl" />
               Send Your Notes
             </a>
             
@@ -173,7 +173,7 @@ function ContactPage() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gray-900 text-white font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <div className="icon-github text-xl"></div>
+              <Icon name="github" className="text-xl" />
               Report an Issue
             </a>
           </div>

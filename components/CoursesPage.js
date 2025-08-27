@@ -128,7 +128,7 @@ function CoursesPage() {
                   ×
                 </button>
               ) : (
-                <div className="icon-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"></div>
+                <Icon name="search" className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               )}
             </div>
 
@@ -141,7 +141,7 @@ function CoursesPage() {
                   : "bg-white dark:bg-gray-800 text-black dark:text-white border-black dark:border-gray-600 hover:shadow-[3px_3px_0px_rgba(0,0,0,0.9)] shadow-[2px_2px_0px_rgba(0,0,0,0.9)]"
               }`}
             >
-              <div className="icon-filter mr-2"></div>
+              <Icon name="filter" className="mr-2" />
               Filters
             </button>
           </div>
@@ -230,7 +230,7 @@ function CoursesPage() {
           ) : (
             <div className="text-center py-12">
               <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center mx-auto mb-4">
-                <div className="icon-search text-xl text-gray-400"></div>
+                <Icon name="search" className="text-xl text-gray-400" />
               </div>
               <h3 className="text-lg font-bold text-black dark:text-white mb-2">No courses found</h3>
               <p className="text-gray-600 dark:text-gray-300">Try searching with different keywords</p>

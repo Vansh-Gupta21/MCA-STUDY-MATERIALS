@@ -61,9 +61,13 @@ function App() {
     };
 
     const handleBackFromQuestionPapers = () => {
-      setShowQuestionPapers(false);
-      setSelectedQuestionPaperSemester(null);
-      setCurrentPage('question-papers');
+      if (selectedQuestionPaperSemester) {
+        // If we're viewing a specific semester, go back to semester selection
+        setSelectedQuestionPaperSemester(null);
+      } else {
+        // If we're on the main question papers page, go back to home
+        setCurrentPage('home');
+      }
     };
 
     const handleShowQuestionPapersForSemester = (semester) => {
@@ -127,6 +131,8 @@ function App() {
           return <HomePage />;
         case 'courses':
           return <CoursesPage />;
+        case 'syllabus':
+          return <SyllabusPage />;
         case 'about':
           return <AboutPage />;
         case 'contact':
