@@ -1,10 +1,14 @@
 # 🌱 Code of Conduct — MCA-STUDY-MATERIALS  
 
-![Welcome Badge](https://img.shields.io/badge/Community-Welcoming-brightgreen?style=for-the-badge)  
-![Respect Badge](https://img.shields.io/badge/Respect-Essential-blue?style=for-the-badge)  
-![Inclusive Badge](https://img.shields.io/badge/Inclusive-Always-orange?style=for-the-badge)  
+![Community](https://img.shields.io/badge/Community-Welcoming-brightgreen?style=for-the-badge)  
+![Respect](https://img.shields.io/badge/Respect-Essential-blue?style=for-the-badge)  
+![Inclusive](https://img.shields.io/badge/Inclusive-Always-orange?style=for-the-badge)  
+![Collaboration](https://img.shields.io/badge/Collaboration-Thrives-purple?style=for-the-badge)  
+![Growth](https://img.shields.io/badge/Growth-Together-yellow?style=for-the-badge)  
 
-Welcome to **MCA-STUDY-MATERIALS** — a comprehensive, user-friendly, and modern web platform for sharing MCA (Master of Computer Applications) study materials, notes, and question papers.  
+---
+
+Welcome to **MCA-STUDY-MATERIALS** 🎓 — a comprehensive, user-friendly, and modern platform for sharing MCA (Master of Computer Applications) study materials, notes, and question papers.  
 Built with **accessibility, simplicity, and community collaboration** at its core. 💡  
 
 ---
@@ -40,10 +44,10 @@ We, as **organizers, maintainers, mentors, and participants**, pledge to build a
 ---
 
 ## 🌟 3. Encouraged Behaviors  
-Beyond simply avoiding harm, contributors are encouraged to:  
+Beyond avoiding harm, contributors are encouraged to:  
 - 🙋 Mentor generously and support newcomers.  
-- 🕊️ Be patient with language/communication differences.  
-- 🎉 Celebrate diversity and cultural differences.  
+- 🕊️ Be patient with communication differences.  
+- 🎉 Celebrate diversity & cultural differences.  
 - 🤗 Promote collaboration over competition.  
 - 📚 Document and share knowledge clearly.  
 - 🌟 Lead by example with positive actions.  
