@@ -58,7 +58,7 @@ function HomePage() {
           {/* Main Logo */}
           <div className="mb-8">
             <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center mx-auto mb-6 transform hover:scale-105 transition-transform">
-              <div className="icon-graduation-cap text-white text-5xl"></div>
+              <Icon name="graduation-cap" className="text-white text-5xl" />
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-black dark:text-white mb-4">
               MCA Notes
@@ -80,14 +80,14 @@ function HomePage() {
               onClick={() => window.handlePageChange('courses')}
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <div className="icon-book-open text-xl"></div>
+              <Icon name="book-open" className="text-xl" />
               Explore Courses
             </button>
             <button
               onClick={() => window.handlePageChange('question-papers')}
               className="px-8 py-4 bg-white dark:bg-gray-800 text-black dark:text-white font-black text-lg rounded-xl border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              <div className="icon-file-text text-xl"></div>
+              <Icon name="file-text" className="text-xl" />
               Question Papers
             </button>
           </div>
@@ -97,7 +97,7 @@ function HomePage() {
             {stats.map((stat, index) => (
               <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-4 border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)]">
                 <div className={`w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center mx-auto mb-2`}>
-                  <div className={`icon-${stat.icon} text-white text-sm`}></div>
+                  <Icon name={stat.icon} className="text-white text-sm" />
                 </div>
                 <div className="text-2xl font-black text-black dark:text-white">{stat.value}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
@@ -123,7 +123,7 @@ function HomePage() {
             {features.map((feature, index) => (
               <div key={index} className="bg-[#f0f0f0] dark:bg-gray-900 rounded-xl p-6 border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.9)] transform hover:scale-105 transition-all">
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center mb-4`}>
-                  <div className={`icon-${feature.icon} text-white text-2xl`}></div>
+                  <Icon name={feature.icon} className="text-white text-2xl" />
                 </div>
                 <h3 className="text-xl font-black text-black dark:text-white mb-2">
                   {feature.title}
@@ -168,7 +168,7 @@ function HomePage() {
                   <div className={`w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center`}>
                     <span className="text-white font-black text-lg">{index + 1}</span>
                   </div>
-                  <div className="icon-arrow-right text-gray-400"></div>
+                  <Icon name="arrow-right" className="text-gray-400" />
                 </div>
                 <h3 className="text-lg font-black text-black dark:text-white mb-2">
                   {semester}

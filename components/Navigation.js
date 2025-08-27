@@ -19,7 +19,7 @@ function Navigation({ currentPage, onPageChange }) {
             onClick={() => onPageChange('home')}
           >
             <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center">
-              <div className="icon-graduation-cap text-white text-lg"></div>
+              <Icon name="graduation-cap" className="text-white text-lg" />
             </div>
             <div>
               <h1 className="text-xl font-black text-black dark:text-white">MCA Notes</h1>
@@ -39,7 +39,7 @@ function Navigation({ currentPage, onPageChange }) {
                     : 'text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >
-                <div className={`icon-${item.icon} text-sm`}></div>
+                <Icon name={item.icon} className="text-sm" />
                 {item.label}
               </button>
             ))}

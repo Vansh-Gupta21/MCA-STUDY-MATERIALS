@@ -20,12 +20,12 @@ function QuestionPapers({ onBack, selectedSemester, onSelectSubject }) {
               onClick={onBack}
               className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 text-black dark:text-white font-bold text-sm rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,0.9)] transition-all mb-4"
             >
-              <div className="icon-arrow-left text-sm"></div>
+              <Icon name="arrow-left" className="text-sm" />
               Back to Semesters
             </button>
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] flex items-center justify-center">
-                <div className="icon-file-text text-2xl text-white"></div>
+                <Icon name="file-text" className="text-2xl text-white" />
               </div>
               <div>
                 <h1 className="text-3xl font-black text-black dark:text-white">{selectedSemester} Subjects</h1>
